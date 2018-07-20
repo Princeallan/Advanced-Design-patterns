@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
-
+            <create></create>
             <div class="col-md-8 ">
                 @foreach ($blogs as $blog )
                     <div class="card mb-4">

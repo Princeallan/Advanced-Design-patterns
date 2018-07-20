@@ -19,9 +19,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 //Route::get('/blogs', 'BlogController@index');
 
-Route::resource('/blogs', 'BlogController');
+//Route::resource('/blogs', 'BlogController');
 
-Route::post('/save', 'BlogController@store');
+//Route::post('/save', 'BlogController@store');
 
 
 

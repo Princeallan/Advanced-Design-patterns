@@ -16,7 +16,9 @@ Route::get('/checkage', 'HomeController@getName');
 
 Route::get('/', 'BlogController@index');
 
-Route::resource('blogs', 'BlogController');
+Route::resource('/blogs', 'BlogController');
+
+Route::post('/api/save', 'BlogController@store');
 
 Route::get('/send/email', 'HomeController@mail');
 
