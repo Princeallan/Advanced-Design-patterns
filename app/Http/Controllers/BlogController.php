@@ -46,12 +46,14 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, [
-            'title' => 'required|max:255 ',
-            'body' => 'required',
-        ]);
-        $this->blogRep->create($request);
-        return redirect()->route('home');
+//        $this->validate($request, [
+//            'title' => 'required|max:255 ',
+//            'body' => 'required',
+//        ]);
+
+        Blog::create($request->all());
+
+        return 'Successfully Done';
     }
 
     /**

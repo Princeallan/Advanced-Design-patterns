@@ -11,7 +11,10 @@ namespace App\Allan;
 
 class Allan
 {
-    public function getName(){
-        return 'Trying out Facades';
+    public function getName($value)
+    {
+        if ($value < 18)
+            throw new Exception('Invalid age specified');
+        $this->Age = $value;
     }
 }

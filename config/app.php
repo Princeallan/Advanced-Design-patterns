@@ -148,6 +148,7 @@ return [
         Illuminate\View\ViewServiceProvider::class,
 
         Collective\Html\HtmlServiceProvider::class,
+        App\Providers\AllanServiceProvider::class,
 
         /*
          * Package Service Providers...

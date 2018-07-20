@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Facades\Allan;
 use App\Repositories\BlogRepository;
-use Illuminate\Support\Facades\Cache;
+//use Illuminate\Support\Facades\Cache;
 use Illuminate\Http\Request;
 use App\User;
 
@@ -40,5 +41,14 @@ class HomeController extends Controller
 
         return view('profile', compact('user'));
 
+    }
+
+    public function getName() {
+        return Allan::getName();
+    }
+
+    public function getUser()
+    {
+        return User::all();
     }
 }

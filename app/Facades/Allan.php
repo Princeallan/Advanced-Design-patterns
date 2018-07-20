@@ -2,7 +2,9 @@
 
 namespace App\Facades;
 
-class Allan extends \Illuminate\Support\Facades\Facade
+use Illuminate\Support\Facades\Facade;
+
+class Allan extends Facade
 {
 
     public static function getFacadeAccessor()

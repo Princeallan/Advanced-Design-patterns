@@ -23,6 +23,8 @@ class AllanServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        app()->bind('name',function (){
+            return new \App\Allan\Allan;
+        });
     }
 }

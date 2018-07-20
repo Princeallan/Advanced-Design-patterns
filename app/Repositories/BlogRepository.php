@@ -4,8 +4,15 @@ namespace App\Repositories;
 
 use App\Blog;
 
-class BlogRepository
+class BlogRepository extends BlogrepoInterface
 {
+
+
+
+    public function __construct( )
+    {
+
+    }
 
     public function getAll()
     {
@@ -15,10 +22,18 @@ class BlogRepository
     public function create($request)
     {
         $blog = new Blog();
-        $blog->title = $request['title'];
-        $blog->body = $request['body'];
-        $blog->user_id= auth()->id();
-        $blog->save();
+
+        $requests = [
+            'title' => $request['title'],
+            'body' => $request['body'],
+            'user_id' => auth()->id()
+        ];
+
+//        $blog->title = $request['title'];
+//        $blog->body = $request['body'];
+//        $blog->user_id = auth()->id();
+
+        $blog->save($requests);
 
         return $blog;
     }
@@ -32,14 +47,14 @@ class BlogRepository
         // get one post
         return Blog::find($id);
     }
-
-    public function remove($id){
-
+//
+//    public function remove($id){
+//
 //        $blog = $this->getOnePost($id);
 //
 //        //check correct user
 //
 //        $blog->delete();
-    }
+//    }
 
 }
